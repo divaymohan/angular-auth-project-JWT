@@ -1,0 +1,49 @@
+<div class="container">
+<div *ngFor="let post of _postsArray">
+  <div class="col-md-15">
+  <div class="card cta cta--featured">
+    <span class="header-line gradient-color-1"></span>
+    <div class="card-block">
+      <h3 class="card-title no-margin-top">Question: {{post.QUS_ID}}<span class="fa fa-map pull-right"></span></h3>
+      
+    </div>
+    <div class="card-block">
+        
+      <h4 class="card-title no-margin-top"><span class="fa fa-map pull-right" [innerHTML]="post.QUS_TEXT">
+      </span></h4> 
+      
+      
+    </div>
+    <div class="card-block">
+      <div class="funkyradio">
+        <div class={{optclass}}>
+            <input type="radio" name="radio" id="radio1" (click)="validationData(post,'A')"/>
+            <label for="radio1">{{post.OPTION1}}</label>
+        </div>
+        <div class={{optclass}}>
+            <input type="radio" name="radio" id="radio2" (click)="validationData(post,'B')"/>
+            <label for="radio2">{{post.OPTION2}}</label>
+        </div>
+        <div class={{optclass}}>
+            <input type="radio" name="radio" id="radio3" (click)="validationData(post,'C')"/>
+            <label for="radio3">{{post.OPTION3}}</label>
+        </div>
+        <div class={{optclass}}>
+            <input type="radio" name="radio" id="radio4" (click)="validationData(post,'D')"/>
+            <label for="radio4">{{post.OPTION4}}</label>
+        </div>
+        
+        
+       
+    </div>      
+      <a class="btn btn-primary" (click)="previousID()">Previous</a>
+      <a class="btn btn-primary float-right" (click)="nextID()">Next</a>
+    </div>
+  </div>
+  </div>
+  
+</div>
+</div>
+                      
+                    
+  
